@@ -19,18 +19,45 @@
 
   <!-- SERVICES SECTION -->
   <section id="services">
-    <h2>Our Services</h2>
-    <div class="service-grid">
-      <div class="card">Software/Hardware Lessons</div>
-      <div class="card">Virus Removal</div>
-      <div class="card">Windows Installation</div>
-      <div class="card">Microsoft Office Installation</div>
-      <div class="card">Microsoft Products Activation</div>
-      <div class="card">Graphics & Designing</div>
-      <div class="card">Hinge Repair</div>
-      <div class="card">Slow Running PC</div>
-    </div>
-  </section>
+  <h2>Our Services</h2>
+  <div class="service-grid">
+    <div class="card" data-service="software">Software/Hardware Lessons</div>
+    <div class="card" data-service="virus">Virus Removal</div>
+    <div class="card" data-service="windows">Windows Installation</div>
+    <div class="card" data-service="office">Microsoft Office Installation</div>
+    <div class="card" data-service="activation">Microsoft Products Activation</div>
+    <div class="card" data-service="graphics">Graphics & Designing</div>
+    <div class="card" data-service="hinge">Hinge Repair</div>
+    <div class="card" data-service="slow">Slow Running PC</div>
+  </div>
+
+  <!-- Descriptions (hidden by default) -->
+  <div class="service-description" id="software">
+    <p>We provide software and hardware lessons tailored for beginners and professionals alike.</p>
+  </div>
+  <div class="service-description" id="virus">
+    <p>Complete virus removal and PC cleanup to restore your computer’s performance.</p>
+  </div>
+  <div class="service-description" id="windows">
+    <p>Installation and setup of Windows operating systems on your PCs and laptops.</p>
+  </div>
+  <div class="service-description" id="office">
+    <p>Microsoft Office installation for professional and personal use.</p>
+  </div>
+  <div class="service-description" id="activation">
+    <p>Activation of Microsoft products to ensure full functionality.</p>
+  </div>
+  <div class="service-description" id="graphics">
+    <p>Graphics and design services including logos, banners, and creative content.</p>
+  </div>
+  <div class="service-description" id="hinge">
+    <p>Repair and replacement of laptop hinges for smooth functionality.</p>
+  </div>
+  <div class="service-description" id="slow">
+    <p>Optimization of slow PCs for faster performance and reliability.</p>
+  </div>
+</section>
+
 
   <!-- ABOUT SECTION -->
   <section id="about">
@@ -78,5 +105,34 @@
   <footer>
     <p>© 2025 GTS. All rights reserved.</p>
   </footer>
+
+    <!-- FOOTER -->
+  <footer>
+    <p>© 2025 GTS. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript for Service Descriptions -->
+  <script>
+    const cards = document.querySelectorAll('.card');
+    const descriptions = document.querySelectorAll('.service-description');
+
+    cards.forEach(card => {
+      card.addEventListener('click', () => {
+        const target = card.getAttribute('data-service');
+
+        descriptions.forEach(desc => {
+          if(desc.id === target){
+            // toggle display for clicked card
+            desc.style.display = desc.style.display === 'block' ? 'none' : 'block';
+          } else {
+            desc.style.display = 'none'; // hide others
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
+
 </body>
 </html>

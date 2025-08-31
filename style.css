@@ -99,6 +99,23 @@ p {
   background: #778da9;
 }
 
+/* Service descriptions (hidden by default) */
+.service-description {
+  display: none; /* hidden initially */
+  padding: 1rem;
+  margin-top: 1rem;
+  background: rgba(65, 90, 119, 0.9); /* matches card color */
+  border-radius: 8px;
+  color: #fff;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background: #778da9;
+}
+
 /* CONTACT */
 #contact {
   padding: 3rem 1rem;
@@ -135,12 +152,19 @@ footer {
 }
 
 .founder-pic {
-  width: 150px;
-  height: 150px;
+  width: 30%;          /* scales with screen */
+  max-width: 150px;    /* keeps it from getting too big on large screens */
+  height: auto;        /* maintains aspect ratio */
   object-fit: cover;
   border-radius: 50%;
-  border: 3px solid #ffcc00; /* gold border */
+  border: 3px solid #ffcc00;
   margin-bottom: 1rem;
+}
+
+@media (max-width: 400px) {
+  .founder-pic {
+    width: 50%;        /* bigger relative size on tiny screens */
+  }
 }
 
 #founder h2 {
