@@ -4,19 +4,23 @@ body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   color: #f4f4f4;
-  background: #0d1b2a;
+  background: url('Back.jpg') no-repeat center center fixed; /* replace with your image path */
+  background-size: cover; /* make sure the image covers the whole page */
 }
 
+/* HEADINGS */
 h1, h2, h3 {
   text-align: center;
   color: #ffd700; /* gold-like yellow */
 }
 
+/* PARAGRAPHS */
 p {
   max-width: 800px;
   margin: 0 auto 1rem auto;
   text-align: center;
 }
+
 
 /* HERO SECTION */
 .hero {
@@ -30,7 +34,7 @@ p {
 }
 
 .hero .overlay {
-  background: rgba(0, 0, 50, 0.6);
+  background: rgba(41, 41, 59, 0);
   padding: 2rem;
   border-radius: 10px;
 }
@@ -70,7 +74,7 @@ p {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0, 0, 50, 0.7); /* adjust opacity to make fade stronger or lighter */
+  background: rgba(215, 215, 231, 0); /* adjust opacity to make fade stronger or lighter */
   z-index: 0;
 }
 
@@ -87,7 +91,7 @@ p {
 }
 
 .card {
-  background: #415a77;
+  background: #3ca0a9;
   padding: 1.5rem;
   text-align: center;
   border-radius: 10px;
@@ -96,7 +100,7 @@ p {
 
 .card:hover {
   transform: scale(1.05);
-  background: #778da9;
+  background: #0f294b;
 }
 
 /* Service descriptions (hidden by default) */
@@ -104,7 +108,7 @@ p {
   display: none; /* hidden initially */
   padding: 1rem;
   margin-top: 1rem;
-  background: rgba(65, 90, 119, 0.9); /* matches card color */
+  background: rgba(16, 3, 4, 0.331); /* matches card color */
   border-radius: 8px;
   color: #fff;
   text-align: center;
@@ -119,7 +123,7 @@ p {
 /* CONTACT */
 #contact {
   padding: 3rem 1rem;
-  background: #1b263b;
+  background: #1b263b00;
 }
 
 #contact a {
@@ -145,7 +149,7 @@ footer {
 }
 
 .founder-overlay {
-  background: rgba(0, 0, 50, 0.7); /* dark overlay */
+  background: rgba(36, 36, 59, 0); /* dark overlay */
   padding: 2rem;
   border-radius: 15px;
   display: inline-block;
@@ -157,7 +161,7 @@ footer {
   height: auto;        /* maintains aspect ratio */
   object-fit: cover;
   border-radius: 50%;
-  border: 3px solid #ffcc00;
+  border: 3px solid #3edbf0;
   margin-bottom: 1rem;
 }
 
