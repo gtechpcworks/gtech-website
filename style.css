@@ -58,8 +58,25 @@ p {
 
 /* SERVICES */
 #services {
+  position: relative;
+  background: url('Background.jpg') no-repeat center center/cover;
   padding: 3rem 1rem;
-  background: #1b263b;
+  text-align: center;
+  color: #fff;
+}
+
+/* Dark overlay to fade background */
+#services::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 50, 0.7); /* adjust opacity to make fade stronger or lighter */
+  z-index: 0;
+}
+
+#services * {
+  position: relative;
+  z-index: 1; /* ensures cards + text appear above overlay */
 }
 
 .service-grid {
@@ -82,12 +99,6 @@ p {
   background: #778da9;
 }
 
-/* ABOUT */
-#about {
-  padding: 3rem 1rem;
-  background: #0d1b2a;
-}
-
 /* CONTACT */
 #contact {
   padding: 3rem 1rem;
@@ -106,4 +117,44 @@ footer {
   text-align: center;
   padding: 1rem;
   font-size: 0.9rem;
+}
+
+/* FOUNDER SECTION */
+#founder {
+  background: url('https://source.unsplash.com/1600x600/?technology,circuit') no-repeat center center/cover;
+  padding: 4rem 1rem;
+  position: relative;
+  text-align: center;
+}
+
+.founder-overlay {
+  background: rgba(0, 0, 50, 0.7); /* dark overlay */
+  padding: 2rem;
+  border-radius: 15px;
+  display: inline-block;
+}
+
+.founder-pic {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #ffcc00; /* gold border */
+  margin-bottom: 1rem;
+}
+
+#founder h2 {
+  color: #ffd700;
+  margin-bottom: 1rem;
+}
+
+#founder h3 {
+  color: #ffcc00;
+  margin-top: 0.5rem;
+}
+
+#founder p {
+  max-width: 600px;
+  margin: 0 auto;
+  color: #f4f4f4;
 }
